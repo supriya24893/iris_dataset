@@ -26,8 +26,11 @@ from feature_engineering import new_matrix
 random_matrix=new_matrix(iris_dataset_array)
 from feature_engineering import compute_accuracy
 accuracy_score=compute_accuracy(random_matrix)
-
-
-
+sum=0
+for i in range(0,20):
+    p=compute_accuracy(random_matrix)
+    sum=sum+p
+    avg_accuracy=sum/i
+print("The average accuracy is", (avg_accuracy))
 
 
